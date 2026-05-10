@@ -59,6 +59,6 @@ describe('login spec', () => {
 
     cy.get('nav').should('be.visible');
     cy.get('nav').find('div:nth-child(2) button').should('be.visible');
-
+    
   });
 })
