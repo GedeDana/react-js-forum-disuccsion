@@ -10,7 +10,7 @@ function changeFormatDateStatusThread(date) {
   const diffMinutes = Math.floor(diffTime / (1000 * 60));
   const hours = Math.floor(diffMinutes / 60);
   if (hours > 0) {
-    return `${diffDays}  hari lalu`;
+    return `${diffDays} hari lalu`;
   } else {
     return `${diffMinutes} menit lalu`;
   }
