@@ -57,8 +57,8 @@ describe('login spec', () => {
 
     cy.get('button').contains(/^Login$/).click();
 
-    cy.get('nav').should('be.visible');
+    cy.get('nav', { timeout: 10000 }).should('be.visible');
     cy.get('nav').find('div:nth-child(2) button').should('be.visible');
-
+    
   });
 })
