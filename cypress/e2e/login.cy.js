@@ -1,23 +1,23 @@
 /**
  * Login speac
  * 1. should display login page correctly
- * 2. should display alert when email is empty 
+ * 2. should display alert when email is empty
  * 3. should display alert when password is empty
  * 4. should display alert when username and passsword are wrong
- * 5. should display alert when username and password are correct 
+ * 5. should display alert when username and password are correct
  */
 
 
 describe('login spec', () => {
   beforeEach(() => {
     cy.visit('http://localhost:5173');
-  })
+  });
 
   it('should display login page correctly', () => {
     cy.get('input[placeholder="Email"]').should('be.visible');
     cy.get('input[placeholder="Password"]').should('be.visible');
     cy.get('button').contains(/^Login$/).should('be.visible');
-    
+
   });
 
   it('should display alert when email is empty', () => {
@@ -59,6 +59,6 @@ describe('login spec', () => {
 
     cy.get('nav', { timeout: 10000 }).should('be.visible');
     cy.get('nav').find('div:nth-child(2) button').should('be.visible');
-    
+
   });
-})
+});
