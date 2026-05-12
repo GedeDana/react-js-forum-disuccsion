@@ -7,10 +7,10 @@ export default defineConfig({
   plugins: [react(),
     tailwindcss()
   ],
-   test: {
+  test: {
     environment: 'jsdom',
   },
   define: {
-  global: 'globalThis',
-},
+    global: 'globalThis',
+  },
 });
